@@ -38,7 +38,7 @@ pipeline {
 
 
 
-         stage('Scan container with Trivy') {
+         stage('Scan container for vulnerabilities') {
             steps {
                 sh 'curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/html.tpl > html.tpl'
                 sh 'mkdir -p reports'
